@@ -1,0 +1,47 @@
+services:
+  # RecycleTech Django应用
+  recycletech:
+    build: .
+    container_name: recycletech-app
+    restart: unless-stopped
+    ports:
+      - "8001:8000"  # 使用8001端口避免冲突
+    volumes:
+      - ./media:/app/media
+      - ./logs:/app/logs
+      - ./db.sqlite3:/app/db.sqlite3
+    environment:
+      - DJANGO_SETTINGS_MODULE=RecycleTech.settings_production
+      - DJANGO_DEBUG=False
+      - DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1,0.0.0.0
+    networks:
+      - recycletech-network
+
+  # Nginx反向代理
+  nginx:
+    image: nginx:alpine
+    container_name: recycletech-nginx
+    restart: unless-stopped
+    ports:
+      - "9090:80"  # 使用9090端口访问
+    volumes:
+      - ./deploy/nginx-docker.conf:/etc/nginx/nginx.conf:ro
+      - ./staticfiles:/var/www/staticfiles:ro
+      - ./media:/var/www/media:ro
+    networks:
+      - recycletech-network
+    depends_on:
+      - recycletech
+
+  # 可选：Redis缓存（如果需要）
+  # redis:
+  #   image: redis:alpine
+  #   container_name: recycletech-redis
+  #   restart: unless-stopped
+  #   networks:
+  #     - recycletech-network
+
+networks:
+  recycletech-network:
+    driver: bridge
+    name: recycletech-network 

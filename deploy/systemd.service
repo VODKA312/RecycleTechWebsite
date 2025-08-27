@@ -1,0 +1,18 @@
+[Unit]
+Description=RecycleTech Django Application
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/recycletech
+Environment=DJANGO_SETTINGS_MODULE=RecycleTech.settings_production
+Environment=PYTHONPATH=/var/www/recycletech
+ExecStart=/var/www/recycletech/venv/bin/python manage.py runserver 127.0.0.1:8000
+ExecReload=/bin/kill -s HUP $MAINPID
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target 
