@@ -1,0 +1,197 @@
+{% load static %}
+{% include 'header.html' %}
+    <!-- Breadcrumb Area Start -->
+    <div class="breadcrumb__area" data-background="{% static '/img/pages/banner.webp' %}">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="breadcrumb__area-content">
+						<h1>Request Quote</h1>
+						<ul>
+							<li><a href="index.html">Home</a><i class="fa-regular fa-angle-right"></i></li>
+							<li>Request Quote</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>       
+    <!-- Breadcrumb Area End -->
+    <!-- Request Quote Page Start -->
+    <div class="request__quote-page section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 xl-mb-30">
+					<div class="request__quote-page-left">
+						<h3>Share your requirements...</h3>
+						<p>This is a good first step. We promise we will get back to you within one business day.</p>
+						<h4>Basic Information</h4>
+						<form id="quote-form" action="#">
+							<div class="row">
+								<div class="col-md-6 mb-30">
+									<div class="request__quote-page-item">
+										<input type="text" name="name" placeholder="Your Full Name" required>
+										<label class="request__quote-page-item-label">Full Name<span> *</span></label>
+									</div>
+								</div>
+								<div class="col-md-6 lg-mb-30">
+									<div class="request__quote-page-item">
+										<input type="email" name="email" placeholder="Email Address" required>
+										<label class="request__quote-page-item-label">Email Address<span> *</span></label>
+									</div>
+								</div>
+								<div class="col-md-6 mb-30">
+									<div class="request__quote-page-item">
+										<input type="text" name="company" placeholder="Business/Company Name" required>
+										<label class="request__quote-page-item-label">Company/Organization<span> *</span></label>
+									</div>
+								</div>
+								<div class="col-md-6 lg-mb-30">
+									<div class="request__quote-page-item">
+										<input type="text" placeholder="Phone Number" name="number" required>
+										<label class="request__quote-page-item-label">Phone Number<span> *</span></label>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<h4>Requirement & Services</h4>
+								</div>
+								<div class="col-md-12 mb-30">
+									<div class="request__quote-page-item">
+										<textarea name="message" placeholder="Describe your idea or project briefly"></textarea>
+										<label class="request__quote-page-item-label">Message ( describe your requirements.... )<span> *</span></label>
+									</div>
+								</div>
+								<!-- <div class="col-md-12 mb-30">
+									<div class="request__quote-page-item">
+										<input type="text" placeholder="Current Website URL (if any)" required>
+										<label class="request__quote-page-item-label">Website URL<span> *</span></label>
+									</div>
+								</div> -->
+								<!-- 希望提供何种服务？-->
+								<div class="col-md-12 mb-30">
+									<p class="mb-20">What services can we provide you?<span> *</span></p>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="request__quote-page-services">
+												<label class="space">
+													<input type="radio" name="service" value="1">
+													<span>Account Enquiring</span>
+												</label>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="request__quote-page-services">
+												<label class="space">
+													<input type="radio" name="service" value="2">
+													<span>Tyre Recycling</span>
+												</label>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="request__quote-page-services">
+												<label class="space">
+													<input type="radio" name="service" value="3">
+													<span>Business inquiries</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>					
+								<div class="col-lg-12">
+									<!-- 订阅博客-->
+									<!-- <h6 class="mb-10">Join our email list?</h6>
+									<label class="space"><input type="checkbox"><span>Join our mailing list to get our blog updates. You can unsubscribe at any time. We respect your privacy and will never share your information.</span></label> -->
+									<button class="btn-one mt-30" type="submit">Submit Request</button>
+								</div>
+							</div>
+						</form>
+					</div>
+                </div>
+				<div class="col-xl-4">
+					<div class="contact__one-map">
+						<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830894606!2d-74.11976383964463!3d40.69766374865767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1652012644726!5m2!1sen!2sbd" loading="lazy"></iframe> -->
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.591962399083!2d149.15842437489363!3d-21.2083623793862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6bdbd265638af4f3%3A0xfc088cdf543f1433!2s371%20Connors%20Rd%2C%20Bakers%20Creek%20QLD%204740!5e0!3m2!1szh-CN!2sau!4v1725180409698!5m2!1szh-CN!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+					<!-- <div class="request__quote-page-right">
+						<div class="swiper request__quote-slider">
+							<div class="swiper-wrapper">
+								<div class="request__quote-page-right-item swiper-slide">
+									<div class="request__quote-page-right-item-icon">
+										<i class="flaticon-straight-quotes"></i>
+									</div>
+									<p>A good design review should be well-organized and structured, with a clear introduction that explains the purpose of the review and sets the context for the evaluation. The reviewer should provide a detailed analysis of the product's design, including its layout, color scheme..</p>
+									<div class="request__quote-page-right-item-bottom">
+										<img src="{% static '/img/team/team-1.jpg' %}" alt="quote-image">
+										<div class="request__quote-page-right-item-bottom-name">
+											<h6>Boris Elbert</h6>
+											<span>Microsave (Uk)</span>
+										</div>
+									</div>
+								</div>
+								<div class="request__quote-page-right-item swiper-slide">
+									<div class="request__quote-page-right-item-icon">
+										<i class="flaticon-straight-quotes"></i>
+									</div>
+									<p>In addition to analyzing the visual aspects of the design, a high-quality review should also evaluate the product's functionality, assessing how well it performs its intended tasks and how user-friendly it is. The reviewer should consider factors such as ease of use, intuitive navigation..</p>
+									<div class="request__quote-page-right-item-bottom">
+										<img src="{% static '/img/team/team-3.jpg' %}" alt="quote-image">
+										<div class="request__quote-page-right-item-bottom-name">
+											<h6>Derya Kurtulus</h6>
+											<span>Max Pension (Canada)</span>
+										</div>
+									</div>
+								</div>
+								<div class="request__quote-page-right-item swiper-slide">
+									<div class="request__quote-page-right-item-icon">
+										<i class="flaticon-straight-quotes"></i>
+									</div>
+									<p>A good review should be structured in a clear and organized way, with an introduction that sets the context and explains the purpose of the review, a detailed analysis of the product's features and performance, and a conclusion that summarizes the key findings and provides..</p>
+									<div class="request__quote-page-right-item-bottom">
+										<img src="{% static '/img/team/team-2.jpg' %}" alt="quote-image">
+										<div class="request__quote-page-right-item-bottom-name">
+											<h6>Archer Graham</h6>
+											<span>Venture (USA)</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div> -->
+				</div>
+            </div>
+        </div>
+    </div>
+    <!-- Request Quote Page End -->
+	 <!-- 引入 jQuery 库 -->
+	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	 <script>
+	   $(document).ready(function() {
+		$('#quote-form').submit(function(event) {
+			
+			event.preventDefault();
+
+			var formData = new FormData(this);
+
+			console.log(formData)
+
+			$.ajax({
+				type: 'POST',
+				url: '/proxy/', // 代理服务器的接口 URL
+				data: formData,
+				contentType: false,
+				processData: false,
+				success: function(response) {
+					alert('Quote request submitted successfully!');
+					$('#quote-form')[0].reset();
+				},
+				error: function(xhr, status, error) {
+					alert('Failed to submit quote request. Please try again later.');
+					console.error(error);
+				}
+			});
+		});
+	});
+	 </script>    
+	{% include 'footer.html' %}

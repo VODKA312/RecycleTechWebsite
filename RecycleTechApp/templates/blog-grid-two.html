@@ -1,0 +1,144 @@
+{% load static %}
+{% include 'header.html' %}
+    <!-- Breadcrumb Area Start -->
+    <div class="breadcrumb__area" data-background="{% static '/img/pages/banner.webp' %}">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="breadcrumb__area-content">
+						<h1>Blog</h1>
+						<ul>
+							<li><a href="/index">Home</a><i class="fa-regular fa-angle-right"></i></li>
+							<li>Blog</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>   
+    <!-- Blog Details Area Start -->
+    <div class="blog__grid section-padding-three">
+        <div class="container">
+			<div class="row dark_image">
+				<div class="col-md-6">
+					<div class="blog__one-item">
+						<div class="blog__one-item-image">
+							<a href="blog/1/"><img src="{% static '/img/blog/blog-1.jpg' %}" alt="blog"></a>
+						</div>
+						<div class="blog__one-item-content">
+							<h6><a href="single-left-sidebar.html">Solar Power for a Cleaner Brighter World.</a></h6>
+							<div class="blog__one-item-content-meta">
+								<span>03 Minutes</span>
+								<h6>February 17, 2024</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="blog__one-item">
+						<div class="blog__one-item-image">
+							<a href="single-left-sidebar.html"><img src="{% static '/img/blog/blog-2.jpg' %}" alt="blog"></a>
+						</div>
+						<div class="blog__one-item-content">
+							<h6><a href="single-left-sidebar.html">Solar Symphony Harmony in Sustainability</a></h6>
+							<div class="blog__one-item-content-meta">
+								<span>11 Minutes</span>
+								<h6>February 11, 2024</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="blog__one-item">
+						<div class="blog__one-item-image">
+							<a href="single-left-sidebar.html"><img src="{% static '/img/blog/blog-3.jpg' %}" alt="blog"></a>
+						</div>
+						<div class="blog__one-item-content">
+							<h6><a href="single-left-sidebar.html">Exploring the Bright Future of Solar Energy.</a></h6>
+							<div class="blog__one-item-content-meta">
+								<span>15 Minutes</span>
+								<h6>February 07, 2024</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="blog__one-item">
+						<div class="blog__one-item-image">
+							<a href="single-left-sidebar.html"><img src="{% static '/img/blog/blog-4.jpg' %}" alt="blog"></a>
+						</div>
+						<div class="blog__one-item-content">
+							<h6><a href="single-left-sidebar.html">The Revolution of Solar Energy Systems.</a></h6>
+							<div class="blog__one-item-content-meta">
+								<span>03 Minutes</span>
+								<h6>February 17, 2024</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="blog__one-item">
+						<div class="blog__one-item-image">
+							<a href="single-left-sidebar.html"><img src="{% static '/img/blog/blog-5.jpg' %}" alt="blog"></a>
+						</div>
+						<div class="blog__one-item-content">
+							<h6><a href="single-left-sidebar.html">Unleashing the Potential of Solar Power.</a></h6>
+							<div class="blog__one-item-content-meta">
+								<span>11 Minutes</span>
+								<h6>February 11, 2024</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="blog__one-item">
+						<div class="blog__one-item-image">
+							<a href="single-left-sidebar.html"><img src="{% static '/img/blog/blog-6.jpg' %}" alt="blog"></a>
+						</div>
+						<div class="blog__one-item-content">
+							<h6><a href="single-left-sidebar.html">Breaking Down Barriers in Renewable Energy.</a></h6>
+							<div class="blog__one-item-content-meta">
+								<span>15 Minutes</span>
+								<h6>February 07, 2024</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="row mt-50">
+                <div class="col-xl-12">
+                    <div class="theme__pagination t-center">
+						<ul>
+							{% if posts.has_previous %}
+							<li>
+								<a href="{% url 'blog_page' posts.previous_page_number %}">
+									<i class="fa-regular fa-angle-left"></i>
+								</a>
+							</li>
+							{% endif %}
+
+							{% for page_num in page_range %}
+								{% if page_num == '…' %}
+									<li><a href="#"><i class="far fa-ellipsis-h"></i></a></li>
+								{% elif page_num == current_page %}
+									<li><a class="active" href="#">{{ page_num|stringformat:"02d" }}</a></li>
+								{% else %}
+									<li><a href="{% url 'blog_page' page_num %}">{{ page_num|stringformat:"02d" }}</a></li>
+								{% endif %}
+							{% endfor %}
+
+							{% if posts.has_next %}
+							<li>
+								<a href="{% url 'blog_page' posts.next_page_number %}">
+									<i class="fa-regular fa-angle-right"></i>
+								</a>
+							</li>
+							{% endif %}
+					</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <!-- Blog Details Area End -->
+{% include 'footer.html' %}
