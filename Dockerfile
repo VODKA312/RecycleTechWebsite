@@ -18,10 +18,11 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # 复制requirements文件
-COPY requirements.txt .
+COPY requirements-docker.txt .
 
-# 安装Python依赖
-RUN pip install --no-cache-dir -r requirements.txt
+# 安装Python依赖（优化缓存）
+RUN pip install --no-cache-dir -r requirements-docker.txt && \
+    pip cache purge
 
 # 复制项目代码
 COPY . .
