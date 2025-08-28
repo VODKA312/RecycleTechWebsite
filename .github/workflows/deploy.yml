@@ -110,6 +110,8 @@ jobs:
         username: ${{ secrets.DEPLOY_USER }}
         key: ${{ secrets.DEPLOY_KEY }}
         port: 22
+        script_stop: true
+        timeout: 60s
         script: |
           echo "Deploying RecycleTech to production server..."
           cd /var/www/recycletech
