@@ -1,15 +1,11 @@
-# Docker环境依赖
+# Docker环境依赖 - 核心包
 Django==4.2.23
 asgiref==3.8.1
 sqlparse==0.5.3
 typing_extensions==4.12.2
 gunicorn==21.2.0
 psycopg2-binary==2.9.9
-redis==5.0.1
 requests==2.32.3
-# 添加Django核心依赖
+# Django核心依赖
 django-cors-headers==4.3.1
-Pillow==10.1.0
-# 添加必要的系统包
-setuptools==68.2.2
-wheel==0.41.6 
+Pillow==10.1.0 
