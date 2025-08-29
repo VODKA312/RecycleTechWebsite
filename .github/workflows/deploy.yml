@@ -114,7 +114,17 @@ jobs:
         timeout: 60s
         script: |
           echo "Deploying RecycleTech to production server..."
+          
+          # 创建必要的目录结构
+          sudo mkdir -p /var/www/recycletech
+          sudo chown $USER:$USER /var/www/recycletech
           cd /var/www/recycletech
+          
+          # 如果目录为空，克隆代码仓库
+          if [ ! "$(ls -A)" ]; then
+            echo "Directory is empty, cloning repository..."
+            git clone https://github.com/${{ github.repository }}.git .
+          fi
           
           # 停止现有容器
           docker-compose down || true
@@ -140,7 +150,17 @@ jobs:
         port: 22
         script: |
           echo "Deploying RecycleTech to staging server..."
+          
+          # 创建必要的目录结构
+          sudo mkdir -p /var/www/recycletech-staging
+          sudo chown $USER:$USER /var/www/recycletech-staging
           cd /var/www/recycletech-staging
+          
+          # 如果目录为空，克隆代码仓库
+          if [ ! "$(ls -A)" ]; then
+            echo "Directory is empty, cloning repository..."
+            git clone https://github.com/${{ github.repository }}.git .
+          fi
           
           # 停止现有容器
           docker-compose down || true
