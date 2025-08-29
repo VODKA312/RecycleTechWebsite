@@ -31,6 +31,12 @@ COPY . .
 # 创建必要的目录
 RUN mkdir -p /app/staticfiles /app/media /app/logs
 
+# 显示当前目录结构
+RUN ls -la /app/
+
+# 显示静态文件源目录
+RUN ls -la /app/RecycleTechApp/static/
+
 # 收集静态文件
 RUN python manage.py collectstatic --noinput --settings=RecycleTech.settings_production
 
