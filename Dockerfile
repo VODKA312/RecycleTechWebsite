@@ -19,7 +19,8 @@ RUN apt-get update \
         build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-#release
+# 复制requirements文件
+COPY requirements-docker.txt .
 
 # 安装Python依赖
 RUN pip install --no-cache-dir -r requirements-docker.txt
