@@ -100,7 +100,7 @@ jobs:
         docker save recycletech:latest | gzip > recycletech-staging.tar.gz
         
         # 上传到测试服务器并部署
-        echo "Uploading Docker image to staging server..."
+        echo "Uploading Docker image to staging server."
         
     - name: Deploy to production via SSH
       if: steps.check-commit.outputs.RELEASE_TRIGGER == 'true'
