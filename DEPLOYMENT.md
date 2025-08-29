@@ -10,7 +10,7 @@
 git checkout dev
 git add .
 git commit -m "更新功能"
-git push origin dev  # 自动部署到测试环境
+git push origin dev  # 自动部署到测试环境 1
 ```
 
 #### 发布生产版本
