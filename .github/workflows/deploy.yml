@@ -126,6 +126,17 @@ jobs:
             git clone git@github.com:VODKA312/RecycleTechWebsite.git .
           fi
           
+          # 确保配置文件存在
+          if [ ! -f "docker-compose.yml" ]; then
+            echo "docker-compose.yml not found, re-cloning repository..."
+            rm -rf .git
+            git clone git@github.com:VODKA312/RecycleTechWebsite.git .
+          fi
+          
+          # 显示当前目录内容
+          echo "Current directory contents:"
+          ls -la
+          
           # 停止现有容器
           docker compose down || true
           
@@ -161,6 +172,17 @@ jobs:
             echo "Directory is empty, cloning repository..."
             git clone git@github.com:VODKA312/RecycleTechWebsite.git .
           fi
+          
+          # 确保配置文件存在
+          if [ ! -f "docker-compose.yml" ]; then
+            echo "docker-compose.yml not found, re-cloning repository..."
+            rm -rf .git
+            git clone git@github.com:VODKA312/RecycleTechWebsite.git .
+          fi
+          
+          # 显示当前目录内容
+          echo "Current directory contents:"
+          ls -la
           
           # 停止现有容器
           docker compose down || true
