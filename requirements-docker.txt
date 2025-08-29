@@ -6,4 +6,10 @@ typing_extensions==4.12.2
 gunicorn==21.2.0
 psycopg2-binary==2.9.9
 redis==5.0.1
-requests==2.32.3 
+requests==2.32.3
+# 添加Django核心依赖
+django-cors-headers==4.3.1
+Pillow==10.1.0
+# 添加必要的系统包
+setuptools==68.2.2
+wheel==0.41.6 

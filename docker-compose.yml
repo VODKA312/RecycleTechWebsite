@@ -5,7 +5,7 @@ services:
     container_name: recycletech-app
     restart: unless-stopped
     ports:
-      - "8001:8000"  # 使用8001端口避免冲突
+      - "8001:8000"
     volumes:
       - ./media:/app/media
       - ./logs:/app/logs
@@ -23,7 +23,7 @@ services:
     container_name: recycletech-nginx
     restart: unless-stopped
     ports:
-      - "9090:80"  # 使用9090端口访问
+      - "9090:80"
     volumes:
       - ./deploy/nginx-docker.conf:/etc/nginx/nginx.conf:ro
       - ./staticfiles:/var/www/staticfiles:ro
@@ -33,15 +33,6 @@ services:
     depends_on:
       - recycletech
 
-  # 可选：Redis缓存（如果需要）
-  # redis:
-  #   image: redis:alpine
-  #   container_name: recycletech-redis
-  #   restart: unless-stopped
-  #   networks:
-  #     - recycletech-network
-
 networks:
   recycletech-network:
-    driver: bridge
-    name: recycletech-network 
+    driver: bridge 

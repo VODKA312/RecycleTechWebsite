@@ -15,14 +15,15 @@ RUN apt-get update \
         gcc \
         libpq-dev \
         curl \
+        git \
+        build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # 复制requirements文件
 COPY requirements-docker.txt .
 
-# 安装Python依赖（优化缓存）
-RUN pip install --no-cache-dir -r requirements-docker.txt && \
-    pip cache purge
+# 安装Python依赖
+RUN pip install --no-cache-dir -r requirements-docker.txt
 
 # 复制项目代码
 COPY . .
@@ -40,10 +41,6 @@ USER app
 
 # 暴露端口
 EXPOSE 8000
-
-# 健康检查
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:8000/ || exit 1
 
 # 启动命令
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "3", "--timeout", "120", "RecycleTech.wsgi:application"] 
