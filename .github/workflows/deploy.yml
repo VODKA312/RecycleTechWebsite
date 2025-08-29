@@ -129,7 +129,11 @@ jobs:
           # 确保配置文件存在
           if [ ! -f "docker-compose.yml" ]; then
             echo "docker-compose.yml not found, re-cloning repository..."
-            rm -rf .git
+            cd ..
+            sudo rm -rf recycletech
+            sudo mkdir -p recycletech
+            sudo chown $USER:$USER recycletech
+            cd recycletech
             git clone git@github.com:VODKA312/RecycleTechWebsite.git .
           fi
           
@@ -176,7 +180,11 @@ jobs:
           # 确保配置文件存在
           if [ ! -f "docker-compose.yml" ]; then
             echo "docker-compose.yml not found, re-cloning repository..."
-            rm -rf .git
+            cd ..
+            sudo rm -rf recycletech-staging
+            sudo mkdir -p recycletech-staging
+            sudo chown $USER:$USER recycletech-staging
+            cd recycletech-staging
             git clone git@github.com:VODKA312/RecycleTechWebsite.git .
           fi
           
