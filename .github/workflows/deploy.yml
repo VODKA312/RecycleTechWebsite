@@ -123,7 +123,7 @@ jobs:
           # 如果目录为空，克隆代码仓库
           if [ ! "$(ls -A)" ]; then
             echo "Directory is empty, cloning repository..."
-            git clone -b main git@github.com:VODKA312/RecycleTechWebsite.git .
+            git clone -b dev git@github.com:VODKA312/RecycleTechWebsite.git .
           fi
           
           # 确保配置文件存在
@@ -134,7 +134,7 @@ jobs:
             sudo mkdir -p recycletech
             sudo chown $USER:$USER recycletech
             cd recycletech
-            git clone -b main git@github.com:VODKA312/RecycleTechWebsite.git .
+            git clone -b dev git@github.com:VODKA312/RecycleTechWebsite.git .
           fi
           
           # 显示当前目录内容
@@ -145,7 +145,7 @@ jobs:
           docker compose down || true
           
           # 拉取最新代码
-          git pull origin main
+          git pull origin dev
           
           # 重新构建并启动容器
           docker compose build --no-cache
