@@ -32,7 +32,10 @@ COPY . .
 RUN mkdir -p /app/staticfiles /app/media /app/logs
 
 # 收集静态文件
-RUN python manage.py collectstatic --noinput
+RUN python manage.py collectstatic --noinput --settings=RecycleTech.settings_production
+
+# 显示静态文件收集结果
+RUN ls -la /app/staticfiles/
 
 # 创建非root用户
 RUN useradd --create-home --shell /bin/bash app \

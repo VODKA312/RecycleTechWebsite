@@ -31,12 +31,15 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = 'DENY'
 
 # 静态文件设置
-STATIC_ROOT = '/app/staticfiles/'
+STATIC_ROOT = '/app/staticfiles'
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    '/app/RecycleTechApp/static',
+]
 
 # 媒体文件设置
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/app/media/'
+MEDIA_ROOT = '/app/media'
 
 # 数据库设置
 DATABASES = {
