@@ -10,6 +10,7 @@ services:
       - ./media:/app/media
       - ./logs:/app/logs
       - ./db.sqlite3:/app/db.sqlite3
+      - staticfiles:/app/staticfiles
     environment:
       - DJANGO_SETTINGS_MODULE=RecycleTech.settings_production
       - DJANGO_DEBUG=False
@@ -26,12 +27,15 @@ services:
       - "80:80"
     volumes:
       - ./deploy/nginx-docker.conf:/etc/nginx/nginx.conf:ro
-      - ./staticfiles:/var/www/staticfiles:ro
+      - staticfiles:/var/www/staticfiles:ro
       - ./media:/var/www/media:ro
     networks:
       - recycletech-network
     depends_on:
       - recycletech
+
+volumes:
+  staticfiles:
 
 networks:
   recycletech-network:
