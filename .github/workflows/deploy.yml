@@ -123,7 +123,7 @@ jobs:
           # 如果目录为空，克隆代码仓库
           if [ ! "$(ls -A)" ]; then
             echo "Directory is empty, cloning repository..."
-            git clone https://github.com/${{ github.repository }}.git .
+            git clone git@github.com:VODKA312/RecycleTechWebsite.git .
           fi
           
           # 停止现有容器
@@ -159,7 +159,7 @@ jobs:
           # 如果目录为空，克隆代码仓库
           if [ ! "$(ls -A)" ]; then
             echo "Directory is empty, cloning repository..."
-            git clone https://github.com/${{ github.repository }}.git .
+            git clone git@github.com:VODKA312/RecycleTechWebsite.git .
           fi
           
           # 停止现有容器
