@@ -77,12 +77,12 @@ def proxy(request):
         # 从前端获取表单数据
         form_data = request.POST
 
-        name = request.POST.get("name")       # 'Yitian Yang'
-        email = request.POST.get("email")     # '15356203871@163.com'
-        company = request.POST.get("company") # 'The University of Sydney'
-        number = request.POST.get("number")   # '0435183537'
-        address = request.POST.get("address") # 'UNIT 4086 185-211 BROADWAY'
-        message = request.POST.get("message") # 'wish to collect 2 tyres'
+        name = request.POST.get("name")       
+        email = request.POST.get("email")     
+        company = request.POST.get("company") 
+        number = request.POST.get("number")   
+        address = request.POST.get("address") 
+        message = request.POST.get("message") 
         service_choice = request.POST.get("service") # '2'
 
 
