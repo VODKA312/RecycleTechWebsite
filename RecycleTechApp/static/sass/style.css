@@ -3465,15 +3465,15 @@ h6 {
   left: -3800px;
   top: -2px;
   width: 4000px;
-  height: 94px;
+  height: 100px;
   background: var(--primary-color-1);
   -webkit-clip-path: polygon(0 0, 99.3% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 99.3% 0, 100% 100%, 0% 100%);
   z-index: -1;
 }
-.header__area-menubar-left-logo {
-  padding: 27px 60px 27px 0;
-}
+/* .header__area-menubar-left-logo {
+  padding: 0px 0px 0px 0;
+} */
 .header__area-menubar-left-logo a {
   display: inline-block;
 }
@@ -3481,7 +3481,8 @@ h6 {
   max-width: 140px;
   position: relative;
   z-index: 9999;
-  top: -35px;
+  height: 100px
+  /* top: -35px; */
 }
 .header__area-menubar-center {
   display: flex;

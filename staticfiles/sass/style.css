@@ -1,3 +1,99 @@
+/*------------------------------------------------------------------------
+
+Template Name:  Slaze - Solar & Renewable Energy HTML5 Template
+�������أ�Http://www.bootstrapmb.com
+Version: 1.0.0
+Description: This Template is created for web template
+
+--------------------------------------------------------------------------
+TABLE OF CONTENTS
+--------------------------------------------------------------------------
+
+* Google Fonts
+* Common CSS
+* Form CSS
+* Hedging CSS
+* Button And Title Styles CSS
+* Scroll Top CSS
+* Preloader CSS
+* Color & Font CSS
+* Video Animation CSS
+* Shape & Image Animation CSS
+* Icon Animation CSS
+* Image Overlay Animation CSS
+* Text Slider CSS
+* Space And Container CSS
+* TopBar One CSS
+* TopBar Two CSS
+* TopBar Three CSS
+* Menu Bar CSS
+* Menu Bar Sticky CSS
+* Menu Sidebar CSS
+* Responsive Menu Sidebar CSS
+* Menu Demo CSS
+* Banner One CSS
+* Banner Two CSS
+* Banner Three CSS
+* Features One CSS
+* Who We CSS
+* Consultation CSS
+* About One CSS
+* About Two CSS
+* About Three CSS
+* About Four CSS
+* Why Choose Us CSS
+* Why Choose Us Two CSS
+* Experience CSS
+* Skill Bar CSS
+* Circle Bar CSS
+* Text Slider One CSS
+* Text Slider Two CSS
+* Service One CSS
+* Service Two CSS
+* Service Three CSS
+* Service Details CSS
+* Video Area CSS
+* Team One CSS
+* Team Two CSS
+* Team Three CSS
+* Team Details CSS
+* Work Process CSS
+* Counter One CSS
+* Counter Two CSS
+* Portfolio One CSS
+* Portfolio Two CSS
+* Portfolio Three CSS
+* Portfolio Details CSS
+* FAQ Area CSS
+* FAQ One CSS
+* Testimonial One CSS
+* Testimonial Two CSS
+* Brand Area CSS
+* Pricing Plan CSS
+* Blog One CSS
+* Blog Two CSS
+* Blog Three CSS
+* Blog Standard CSS
+* Blog Details CSS
+* Request Quote Two CSS
+* Contact One CSS
+* Contact Two CSS
+* Cta One CSS
+* Footer One Cta CSS
+* Footer Two Cta CSS
+* Footer Three Cta CSS
+* Breadcrumb CSS
+* Error CSS
+* Theme Pagination CSS
+* Footer One CSS
+* Footer Two CSS
+* Footer Three CSS
+* Copyright One CSS
+* Copyright Two CSS
+* Copyright Three CSS
+* Dark Light Switch CSS
+* Dark CSS
+
 /*==========================================================================
 * Google Fonts
 ==========================================================================*/
@@ -40,7 +136,7 @@ a:hover {
 }
 
 .section-padding {
-  padding: 120px 0px;
+  padding: 80px 0px;
 }
 
 .section-padding-two {
@@ -3375,9 +3471,9 @@ h6 {
           clip-path: polygon(0 0, 99.3% 0, 100% 100%, 0% 100%);
   z-index: -1;
 }
-.header__area-menubar-left-logo {
-  padding: 27px 60px 27px 0;
-}
+/* .header__area-menubar-left-logo {
+  padding: 0px 0px 0px 0;
+} */
 .header__area-menubar-left-logo a {
   display: inline-block;
 }
@@ -3385,6 +3481,8 @@ h6 {
   max-width: 140px;
   position: relative;
   z-index: 9999;
+  height: 100px
+  /* top: -35px; */
 }
 .header__area-menubar-center {
   display: flex;
@@ -4318,6 +4416,7 @@ h6 {
 .banner__one-content p {
   max-width: 560px;
   margin-bottom: 40px;
+  color: black;
   font-size: 20px;
   line-height: 32px;
   text-transform: capitalize;
@@ -4328,11 +4427,12 @@ h6 {
   right: 0;
   overflow: hidden;
   height: 100%;
-  width: 45%;
+  width: 50%;
 }
 .banner__one-right img {
   width: 100%;
   height: 100%;
+  opacity: 0.7;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -4390,7 +4490,7 @@ h6 {
   width: 55%;
   height: 100%;
   background-color: var(--primary-color-1);
-  background-image: url("../img/shape/shape-2.png");
+  background-image: url("../../assets/img/shape/shape-2.png");
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -5482,6 +5582,39 @@ h6 {
   margin-top: 20px;
 }
 .choose__us-area-list-item-bottom h6 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  max-width: 125px;
+}
+.choose__us-area-list2 {
+  margin-top: 30px;
+  border-top: 1px solid var(--border-color-1);
+  border-left: 1px solid var(--border-color-1);
+  display: inline-flex;
+}
+.choose__us-area-list2-item {
+  padding: 35px 40px;
+  border-bottom: 1px solid var(--border-color-1);
+  border-right: 1px solid var(--border-color-1);
+  background: var(--bg-white);
+  padding-right: 75px;
+}
+.choose__us-area-list2-item > i {
+  color: var(--primary-color-1);
+  font-size: 35px;
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-7);
+}
+.choose__us-area-list2-item-bottom {
+  margin-top: 20px;
+}
+.choose__us-area-list2-item-bottom h6 {
   font-size: 18px;
   line-height: 28px;
   font-weight: 700;
@@ -8437,8 +8570,9 @@ h6 {
 ==========================================================================*/
 .cta__one {
   position: relative;
-  z-index: 1;
-  margin-top: -100px;
+  z-index: 2;
+  margin-top: 50px;
+  margin-bottom: -50px;
 }
 .cta__one-title h3 {
   color: var(--text-white);
@@ -9149,7 +9283,7 @@ h6 {
   position: absolute;
   top: 8px;
   right: 54px;
-  background-image: url("../img/icon/sun.png");
+  background-image: url("../../assets/img/icon/sun.png");
   background-repeat: no-repeat;
   width: 18px;
   height: 18px;
@@ -9160,7 +9294,7 @@ h6 {
   position: absolute;
   top: 8px;
   left: 54px;
-  background-image: url("../img/icon/moon.png");
+  background-image: url("../../assets/img/icon/moon.png");
   background-repeat: no-repeat;
   width: 18px;
   height: 18px;
@@ -9257,10 +9391,10 @@ h6 {
   mix-blend-mode: color;
 }
 .dark-mode .banner__two {
-  background-image: url("../img/shape/shape-13-dark.jpg") !important;
+  background-image: url("../../assets/img/shape/shape-13-dark.jpg") !important;
 }
 .dark-mode .service__one-item:hover {
-  background-image: url("../img/shape/shape-5.png") !important;
+  background-image: url("../../assets/img/shape/shape-5.png") !important;
 }
 .dark-mode .header__area.three .header__area-menubar {
   box-shadow: 0 0 50px rgba(var(--border-color-2), 0.03);
@@ -9269,8 +9403,8 @@ h6 {
   left: calc(100% - 31px);
 }
 .dark-mode .mode__switch span::before {
-  background-image: url("../img/icon/sun-white.png");
+  background-image: url("../../assets/img/icon/sun-white.png");
 }
 .dark-mode .mode__switch span::after {
-  background-image: url("../img/icon/moon-dark.png");
+  background-image: url("../../assets/img/icon/moon-dark.png");
 }/*# sourceMappingURL=style.css.map */
