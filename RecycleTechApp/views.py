@@ -77,6 +77,15 @@ def proxy(request):
         # 从前端获取表单数据
         form_data = request.POST
 
+        name = request.POST.get("name")       # 'Yitian Yang'
+        email = request.POST.get("email")     # '15356203871@163.com'
+        company = request.POST.get("company") # 'The University of Sydney'
+        number = request.POST.get("number")   # '0435183537'
+        address = request.POST.get("address") # 'UNIT 4086 185-211 BROADWAY'
+        message = request.POST.get("message") # 'wish to collect 2 tyres'
+        service_choice = request.POST.get("service") # '2'
+
+
         # 构建 Mailjet API 请求
         api_url = 'https://api.mailjet.com/v3.1/send'
         api_key = '5e71f0ae515d1ff8d1311023e3970781'
@@ -87,22 +96,21 @@ def proxy(request):
             'Authorization': f'Basic {auth}'
         }
 
-        # 获取选择的服务
-        service_choice = form_data.get('service')
-
         # 根据选择的服务设置主题和收件人
         if service_choice == '1':
             subject = 'New request for account inquiry'
-            to_email = 'sales@recycletechaustralia.com.au'
+            # to_email = 'sales@recycletechaustralia.com.au'
+            to_email = 'kayyitianyang@gmail.com'
         elif service_choice == '2':
             subject = 'New request for Tyre recycling'
-            to_email = 'sales@recycletechaustralia.com.au'
+            to_email = 'kayyitianyang@gmail.com'
         elif service_choice == '3':
             subject = 'New request for Business inquiries'
-            to_email = 'Deanh@recycletechaustralia.com.au'
+            to_email = 'kayyitianyang@gmail.com'
         else:
             subject = 'New request for an unknown service'
-            to_email = 'sales@recycletechaustralia.com.au'
+            # to_email = 'sales@recycletechaustralia.com.au'
+            to_email = 'kayyitianyang@gmail.com'
 
         # 构建邮件内容
         text_part = f"User Name: {form_data['name']}\nUser Email: {form_data['email']}\nCompany: {form_data['company']}\nPhone: {form_data['number']}\nMessage: {form_data['message']}"
@@ -111,8 +119,8 @@ def proxy(request):
             'Messages': [
                 {
                     'From': {
-                        'Email': 'kayyitianyang@gmail.com',
-                        'Name': 'Kay Yang'
+                        'Email': 'noreply@recycletechaustralia.com.au',
+                        'Name': 'RecycleTech Website'
                     },
                     'To': [
                         {
@@ -121,7 +129,7 @@ def proxy(request):
                         }
                     ],
                     'Subject': subject,
-                    'TextPart': text_part
+                    'TextPart': text_part, 
                 }
             ]
         }
