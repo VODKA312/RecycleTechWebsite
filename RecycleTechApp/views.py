@@ -93,16 +93,16 @@ def proxy(request):
         # 根据选择的服务设置主题和收件人
         if service_choice == '1':
             subject = 'New request for account inquiry'
-            to_email = 'Judig@recycletechaustralia.com.au'
+            to_email = 'sales@recycletechaustralia.com.au'
         elif service_choice == '2':
             subject = 'New request for Tyre recycling'
-            to_email = 'Judig@recycletechaustralia.com.au'
+            to_email = 'sales@recycletechaustralia.com.au'
         elif service_choice == '3':
             subject = 'New request for Business inquiries'
             to_email = 'Deanh@recycletechaustralia.com.au'
         else:
             subject = 'New request for an unknown service'
-            to_email = 'Judig@recycletechaustralia.com.au'
+            to_email = 'sales@recycletechaustralia.com.au'
 
         # 构建邮件内容
         text_part = f"User Name: {form_data['name']}\nUser Email: {form_data['email']}\nCompany: {form_data['company']}\nPhone: {form_data['number']}\nMessage: {form_data['message']}"
