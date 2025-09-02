@@ -152,7 +152,7 @@ jobs:
           docker compose up -d
 
           # 进入容器里执行 collectstatic
-          docker compose exec -T web python manage.py collectstatic --noinput --clear
+          docker compose exec -T recycletech python manage.py collectstatic --noinput --clear
           
           # 检查服务状态
           docker compose ps
@@ -204,6 +204,9 @@ jobs:
           # 重新构建并启动容器
           docker compose build --no-cache
           docker compose up -d
+
+          # 进入容器里执行 collectstatic
+          docker compose exec -T recycletech python manage.py collectstatic --noinput --clear
           
           # 检查服务状态
           docker compose ps
