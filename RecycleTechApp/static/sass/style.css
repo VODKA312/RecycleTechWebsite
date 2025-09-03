@@ -4417,6 +4417,9 @@ h6 {
   padding: 145px 0 315px 0;
   position: relative;
   z-index: 1;
+  max-width: 900px;    /* 给文字区域一个合适的最大宽度 */
+  margin-left: auto;   /* 居中或靠左 */
+  margin-right: auto;
 }
 .banner__one-content h1 {
   font-size: 100px;
@@ -4424,7 +4427,7 @@ h6 {
   margin-bottom: 30px;
 }
 .banner__one-content p {
-  max-width: 560px;
+  /* max-width: 560px; */
   margin-bottom: 40px;
   color: black;
   font-size: 20px;
@@ -4437,7 +4440,7 @@ h6 {
   right: 0;
   overflow: hidden;
   height: 100%;
-  width: 50%;
+  width: 40%;
 }
 .banner__one-right img {
   width: 100%;
