@@ -722,6 +722,16 @@ h6 {
   height: 100%;
   background: var(--color-1);
   z-index: 9999999999;
+
+   /* 新增：给遮罩淡出过渡 —— 改这里 */
+  transition: opacity .22s ease;
+}
+
+/* 新增：淡出状态 —— 改这里 */
+.theme-loader.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .spinner {
@@ -739,7 +749,7 @@ h6 {
   border-radius: 50%;
   background: var(--primary-color-1);
   display: inline-block;
-  animation: bounces 1s ease-in-out infinite alternate;
+  animation: bounces .45s ease-in-out infinite alternate;
   transform-origin: 50% 50%;
 }
 .spinner-bounce.one {
@@ -747,10 +757,10 @@ h6 {
 }
 .spinner-bounce.two {
   margin-right: 15px;
-  animation-delay: 0.4s;
+  animation-delay: 0.1s;
 }
 .spinner-bounce.three {
-  animation-delay: 0.8s;
+  animation-delay: 0.2s;
 }
 
 @keyframes bounces {

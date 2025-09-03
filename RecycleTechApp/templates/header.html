@@ -204,3 +204,14 @@
             });
         });
      </script>
+
+	 <script>
+		document.addEventListener('DOMContentLoaded', function () {
+		var loader = document.querySelector('.theme-loader');
+		if (!loader) return;
+		// 触发渐隐
+		loader.classList.add('is-hidden');
+		// 等过渡结束再彻底移除
+		setTimeout(function(){ loader.style.display = 'none'; }, 240);
+		});
+	</script>
