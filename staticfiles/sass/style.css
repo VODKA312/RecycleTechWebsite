@@ -3465,7 +3465,7 @@ h6 {
   left: -3800px;
   top: -2px;
   width: 4000px;
-  height: 94px;
+  height: 105px;
   background: var(--primary-color-1);
   -webkit-clip-path: polygon(0 0, 99.3% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 99.3% 0, 100% 100%, 0% 100%);
@@ -9408,3 +9408,24 @@ h6 {
 .dark-mode .mode__switch span::after {
   background-image: url("../../assets/img/icon/moon-dark.png");
 }/*# sourceMappingURL=style.css.map */
+
+.info-link {
+    display: block;               /* 让 a 变成块级元素，支持居中 */
+    text-align: center;           /* 居中文本 */
+    line-height: 1.8;             /* 行距更舒适 */
+    padding: 80px 35px;           /* 内边距 */
+    background: #f9f9f9;          /* 背景色 */
+    border-radius: 10px;          /* 圆角 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 阴影 */
+    font-size: 30px;
+    color: #333;                  /* 字体颜色 */
+    text-decoration: none;        /* 去掉默认下划线 */
+    transition: all 0.3s ease;    /* 动效 */
+}
+
+.info-link:hover {
+    background: var(--primary-color-1);          /* hover 背景 */
+    color: #f9f9f9;               /* hover 字体颜色 */
+    transform: translateY(-2px);  /* hover 微微上浮 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
