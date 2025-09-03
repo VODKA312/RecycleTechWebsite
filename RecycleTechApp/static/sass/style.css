@@ -3494,6 +3494,15 @@ h6 {
   height: 100px
   /* top: -35px; */
 }
+
+.header__area-menubar-right-logo a img {
+  max-width: 90px;
+  position: relative;
+  z-index: 9999;
+  height: 90px
+  /* top: -35px; */
+}
+
 .header__area-menubar-center {
   display: flex;
   align-items: center;
