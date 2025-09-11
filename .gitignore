@@ -10,7 +10,7 @@ media/
 
 # 静态文件
 staticfiles/
-static/
+# static/
 
 # 环境变量
 .env
