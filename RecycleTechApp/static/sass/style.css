@@ -9003,7 +9003,17 @@ h6 {
 }
 .footer__area-widget .logo img {
   max-width: 140px;
+    object-fit: contain;  /* 推荐用 contain，避免变形 */
+    margin: 0 10px;
 }
+
+.logo-main {
+  height: 140px;
+}
+.logo-tsa-cred {
+  height: 100px;
+}
+
 .footer__area-widget-company p {
   margin: 0;
   max-width: 255px;
